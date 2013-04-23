@@ -139,7 +139,7 @@ public class APIController {
 		URL url = new URL(target);
 
 		URLConnection urlConnection = url.openConnection();
-		int time = 2000; // time logic is weird, I know, but it works
+		int time = 4000; // time logic is weird, I know, but it works
 		urlConnection.setConnectTimeout(time);
 		urlConnection.setReadTimeout(time * 2);
 
@@ -160,6 +160,9 @@ public class APIController {
 	}
 }
 
+/**
+ * Used to interrupt the get request if it takes too much time.
+ */
 class InterruptThread implements Runnable {
 	Thread parent;
 	URLConnection con;

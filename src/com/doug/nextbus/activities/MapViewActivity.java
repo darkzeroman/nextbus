@@ -463,16 +463,6 @@ public class MapViewActivity extends RoboSherlockMapActivity {
 			Log.v("RefreshMap", "Map refreshed");
 		}
 
-		/**
-		 * <strong>public void showAToast (String st)</strong></br> this little
-		 * method displays a toast on the screen.</br> it checks if a toast is
-		 * currently visible</br> if so </br> ... it "sets" the new text</br>
-		 * else</br> ... it "makes" the new text</br> and "shows" either or
-		 * 
-		 * @param st
-		 *            the string to be toasted
-		 */
-
 		public void showAToast(String st) { // "Toast toast" is declared in the
 											// class
 			try {

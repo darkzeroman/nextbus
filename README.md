@@ -4,11 +4,11 @@ GT NextBus
 **Features Currently Being Worked On**
 - [?] Fix times for buses in JSON
 - [?] Update the JSON data [work in progress]
-- [ ] Fix Add-to-Favorites icon with a plus sign
+- [x] Fix Add-to-Favorites icon with a plus sign
 - [?] Implement warning for when the API is down? (Look into timeout issues)
 
 **Features to Consider**
-- [ ] Add support for Pause/onResume
+- [x] Add support for Pause/onResume
 - [ ] Include static schedules for Grocery? Emory?
 - [ ] Make some sort of delete/reorder list for favorites
 
@@ -20,8 +20,6 @@ GT NextBus
 - [x] Migrate from native JSON parser to GSON
 - [x] Fix "Other Route" Cells
 - [x] Made the SlidingDrawer use a BaseAdapter instead of an ArrayAdapter
-
-
 
 
 **Preferences for code are:**
@@ -56,8 +54,8 @@ Necessary libraries are:
 - Prefer factory methods for creating intents.
 - Do not include "android-support-v4.jar" since it is included with the ViewPagerIndicator library.
 - Routes, directions, and stops have titles and tags. Titles are displayed to the user because they are the full names. Tags are used for API calls since they are smaller. Example shown at the end of this list. Except Route titles are not used because they are too long to display properly. In that case, use the capitalize method to convert the tag into an appropriate format for display.
-- There are inconsistencies in stop tags for different routes. For example, Red and Blue both haave a stop at Fitten but for the tags are "fitten" and "fitten_a" for Red and Blue routes, respectively. There are other stops with similar pattern, like for northave and northave_a, and Student Center is sometimes referred to as studcentr and centrstud. This might be a limitation of the NextBus API, but it's an inconvenience for us.
-- A route may use one stop in multiple directions. For example, the Midnight Rambler (Night), stops at the Transit Hub twice for two directions (To Clough Commons and To Fitten). So the user should be able to select the direction and 
+- There are inconsistencies in stop tags for different routes. For example, Red and Blue both have a stop at Fitten but for the tags are "fitten" and "fitten_a" for Red and Blue routes, respectively. There are other stops with similar pattern, like for northave and northave_a, and Student Center is sometimes referred to as studcentr and centrstud. This might be a limitation of the NextBus API, but it's an inconvenience for us.
+- A route may use one stop in multiple directions. For example, the Midnight Rambler (Night), stops at the Transit Hub twice for two directions (To Clough Commons and To Fitten). So the user should be able to select the route and the direction.
 
 Sample Route/Direction/Stop tag/titles:
 
@@ -80,6 +78,8 @@ public class MyClass {
     protected int mProtected;
 }
 ````
+
+More information about styling guide [here](https://github.com/darkzeroman/Notes/blob/master/Android-Java.md#code-style-guidelines).
 
 **Activities**
 
